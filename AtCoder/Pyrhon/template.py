@@ -33,7 +33,7 @@ lists = input().split('T')
            bar
 """
 num = int(input())
-lists = [input() for i in range(n)]
+lists = [input() for i in range(num)]
 # >>> num = 3
 # >>> lists = ['hoge','foo','bar']
 
