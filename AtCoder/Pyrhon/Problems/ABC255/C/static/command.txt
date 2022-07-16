@@ -1,0 +1,2 @@
+# python run
+python3 answer.py < /static/input.txt 
