@@ -1,2 +1,0 @@
-# python run
-python3 answer.py < input.txt 
