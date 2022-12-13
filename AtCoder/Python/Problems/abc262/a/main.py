@@ -19,10 +19,9 @@ num = int(input())
 
 if num % 4 == 2:
     print(num)
-else:
-    a = 4 - (num % 4)
-    print(num + a)
-
-
-def foo():
-    print("Hello" "World")
+elif num % 4 == 1:
+    print(num + 1)
+elif num % 4 == 3:
+    print(num + 3)
+elif num % 4 == 0:
+    print(num + 2)
