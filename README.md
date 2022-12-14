@@ -7,6 +7,11 @@ $ npm install -g atcoder-cli
 $ acc -v # 正しくインストールされたかどうか確認する
 ```
 
+online judge
+
+```bash
+pip3 install online-judge-tools
+```
 
 cd
 
