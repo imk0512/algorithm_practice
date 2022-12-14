@@ -1,5 +1,12 @@
 # algorithm_practice
 
+AtCoder cli install
+
+```bash
+$ npm install -g atcoder-cli
+$ acc -v # 正しくインストールされたかどうか確認する
+```
+
 
 cd
 
