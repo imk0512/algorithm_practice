@@ -28,6 +28,15 @@ userId: {userId}
 password: {password}
 ```
 
+online-judge-tools
+
+```bash
+oj login https://beta.atcoder.jp/
+
+userId: {userId}
+password: {password}
+```
+
 import problems
 
 ```bash
