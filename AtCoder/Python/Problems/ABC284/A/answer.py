@@ -7,7 +7,7 @@
 # 数値 1個
 # num = int(input())
 # 数値２個
-N,M = map(int,input().split())
+# N, M = map(int, input().split())
 # 数値3個
 # N,X,Y = map(int,input().split())
 
@@ -17,4 +17,12 @@ N,M = map(int,input().split())
 # numList = list(map(int,input().split()))
 
 
-print(pow(N,M))
+num = int(input())
+list = []
+for _ in range(num):
+    list.append(input())
+
+
+list = reversed(list)
+for str in list:
+    print(str)
