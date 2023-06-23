@@ -1,31 +1,25 @@
 import sys
 
-# python3 answer.py < input.txt
-# Utilities ---------------------
 def ip(): return sys.stdin.readline().strip()
-def ips(): return sys.stdin.readline().strip().split()
-def mv(type): return map(type, ips())
-def lmv(type): return list(map(type, ips()))
-# -------------------------------
+def lmv(type): return list(map(type, sys.stdin.readline().strip().split()))
 
-
-# Function Block ----------------
-
-# -------------------------------
-
-
-# Please write the code below ---
 def main():
     L = int(ip())
     S = lmv(int)
     N = int(ip())
     S.sort()
-    
-    pass
-# -------------------------------
 
+    S = [0] + S + [1001]
+    good_intervals = 0
 
-# Ignore it ---------------------
+    for i in range(1, len(S)):
+        if S[i-1] < N < S[i]:
+            left = N - S[i-1]
+            right = S[i] - N
+            good_intervals = (left * right) - 1
+            break
+
+    print(good_intervals)
+
 if __name__ == "__main__":
     main()
-# -------------------------------
