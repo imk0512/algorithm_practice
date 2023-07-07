@@ -17,6 +17,7 @@ def lmv(type): return list(map(type, ips()))
 # Please write the code below ---
 def main():
     pass
+
 # -------------------------------
 
 

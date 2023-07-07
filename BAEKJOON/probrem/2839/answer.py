@@ -1,7 +1,6 @@
 import sys
-sys.setrecursionlimit(10**9)
 
-
+# python3 answer.py < input.txt
 # Utilities ---------------------
 def ip(): return sys.stdin.readline().strip()
 def ips(): return sys.stdin.readline().strip().split()
@@ -11,35 +10,32 @@ def lmv(type): return list(map(type, ips()))
 
 
 # Function Block ----------------
-def dfs(g, d, x, wei):
-    for i in g[x]:
-        a, b = i
-        if d[a] == -1:
-            d[a] = wei + b
-            dfs(g, d, a, wei + b)
+def count_bags(n):
+    # dp[i]: iキログラムの砂糖を作るための最小袋数
+    dp = [float('inf')] * (n + 1)
+    dp[0] = 0
+
+    for i in range(3, n + 1):
+        dp[i] = min(dp[i], dp[i - 3] + 1)
+
+    for i in range(5, n + 1):
+        dp[i] = min(dp[i], dp[i - 5] + 1)
+
+    if dp[n] == float('inf'):
+        return -1
+    else:
+        return dp[n]
 # -------------------------------
 
 
 # Please write the code below ---
 def main():
-    size = int(ip())
-    g = [[] for _ in range(size + 1)]
+    n = int(input())
 
-    for _ in range(size - 1):
-        a, b, c = mv(int)
-        g[a].append([b, c])
-        g[b].append([a, c])
-
-    d = [-1] * (size + 1)
-    d[1] = 0
-    dfs(g, d, 1, 0)
-
-    s = d.index(max(d))
-    d = [-1] * (size + 1)
-    d[s] = 0
-    dfs(g, d, s, 0)
-
-    print(max(d))
+    result = count_bags(n)
+    print(result)
+        
+    pass
 # -------------------------------
 
 
